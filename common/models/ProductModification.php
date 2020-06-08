@@ -43,8 +43,8 @@ class ProductModification extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'product_id' => 'Product ID',
-            'name' => 'Name',
+            'product_id' => 'Товар',
+            'name' => 'Название',
         ];
     }
 

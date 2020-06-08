@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\ProductModificationSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Product Modifications';
+$this->title = 'Модификации товаров';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="product-modification-index">
@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Product Modification', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать модификацию', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
