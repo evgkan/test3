@@ -6,6 +6,7 @@ use common\models\Product;
 use Yii;
 use common\models\ProductModification;
 use common\models\ProductModificationSearch;
+use yii\filters\AccessControl;
 use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -22,6 +23,15 @@ class ProductModificationController extends Controller
     public function behaviors()
     {
         return [
+            'access' => [
+                'class' => AccessControl::class,
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
             'verbs' => [
                 'class' => VerbFilter::class,
                 'actions' => [

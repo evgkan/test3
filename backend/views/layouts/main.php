@@ -1,6 +1,7 @@
 <?php
 
 /* @var $this \yii\web\View */
+
 /* @var $content string */
 
 use backend\assets\AppAsset;
@@ -35,13 +36,12 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    $menuItems = [
-        ['label' => 'Список товаров', 'url' => ['/product']],
-        ['label' => 'Модификации товаров', 'url' => ['/product-modification']],
-    ];
+    $menuItems = [];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
+        $menuItems[] = ['label' => 'Список товаров', 'url' => ['/product']];
+        $menuItems[] = ['label' => 'Модификации товаров', 'url' => ['/product-modification']];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
